@@ -5,7 +5,7 @@ namespace TiledJsonUtility
     [Serializable]
     public class TiledCoordinate
     {
-        int x;
-        int y;
+        public int x;
+        public int y;
     }
 }

@@ -35,6 +35,6 @@ namespace TiledJsonUtility
         public int tilewidth;
         public TiledLayer[] layers;
         public TiledTileset[] tilesets;
-        public MapProperties properties;
+        public TiledProperty[] properties;
     }
 }

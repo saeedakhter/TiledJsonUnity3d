@@ -6,5 +6,6 @@ namespace TiledJsonUtility
     public class TiledTile
     {
         public int[] terrain;
+        public TiledProperty[] properties;
     }
 }

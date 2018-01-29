@@ -30,15 +30,27 @@ namespace TiledJsonUtility
         public int imageheight;
         public int margin;
         public string name;
-        TilesetProperties properties;
+        public TiledProperty[] properties;
         public int spacing;
         public TiledTerrain[] terrains;
-        int tilecount;
-        int tileheight;
-        object tileoffset;
-        TilesetProperties tileproperties;
+        public int tilecount;
+        public int tileheight;
         public TiledTile[] tiles;
-        int tilewidth;
-        string type;
+        public TiledLayer[] layers;
+        public int tilewidth;
+        public string type;
+
+        public void PrintSummary()
+        {
+            if(TiledType.TILESET.Equals(type))
+            {
+                int terrainCount = terrains == null ? 0 : terrains.Length;
+                Debug.LogFormat("Tileset: {0} (tiles are {1}px by {2}px) ({3} tiles) ({4} terrains)", name, tilewidth, tileheight, tilecount, terrainCount);
+            }
+            else
+            {
+                Debug.LogError("Not a tileset, json object is of type: " + type);
+            }
+        }
     }
 }

@@ -14,7 +14,7 @@ namespace TiledJsonUtility
         public bool point;
         public TiledCoordinate[] polygon;
         public TiledCoordinate[] polyline;
-        public TiledObjectProperties properties;
+        public TiledProperty[] properties;
         public float rotation;
         public string text;
         public string type;
